@@ -1,0 +1,44 @@
+	,正解が〇,正解が×
+〇と予想,TP,FP
+×と予想,FN,TN
+
+T:True(予想が当たっている)
+F:False(予想が外れている)
+P:Positive(〇)
+N:Negative(×)
+
+	,〇,×　←　正解
+〇,TP,FP
+×,FN,TN
+↑
+予想
+
+	,正解が〇,正解が×
+〇と予想,True,False
+×と予想,False,True
+
+	,正解が〇,正解が×
+〇と予想,Positive,Positive
+×と予想,Negative,Negative
+
+Positive,True,False
+Negative,False,True
+
+正解率(Accuracy)=(TP+TN)/(TP+FP+FN+TN)
+　←　全体のデータ数のうち正しく分類できたデータ数の割合
+
+再現率(Recall)=TP/(TP+FN)
+　←　実際に〇(Positive)だったデータのうち正しく〇(Positive)として分類できたデータの割合
+　　←　×(Negative)を〇(Positive)と分類(偽陽性)としても問題はなく、
+　　　〇(Positive)を確実に〇(Positive)と分類したい場合に用いる
+　　　←　具体例：病気の分類
+
+適合率(Precision)=TP/(TP+FP)
+　←　〇(Positive)として分類(予想)したデータのうち、正しく分類できたデータの割合
+　　←　〇(Positive)を×(Negative)と分類(偽陰性)としても問題はなく、
+　　　　×(Negative)を確実に×(Negative)と分類したい場合に用いる
+　　　←　具体例：インターネットの検索
+
+F値(F-Score)=2*再現率*適合率/(再現率+適合率)
+　←　再現率(Recall)と適合率(Precision)の調和平均
+　　←　再現率(Recall)と適合率(Precision)はトレードオフの関係にある

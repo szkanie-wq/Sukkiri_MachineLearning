@@ -1,0 +1,10 @@
+*
+!.gitignore
+
+!*.ipynb
+!*.py
+!*.md
+!*.csv
+!*.json
+!*.tsb
+!*.txt
